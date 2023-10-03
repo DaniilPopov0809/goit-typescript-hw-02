@@ -2,18 +2,12 @@
   Використовуйте generics та інтерфейси, щоб виправити помилку в наступних класах:
 */
 
-interface ComponentProps {
-  title: string;
+class Component<T> {
+  constructor(public props: T) {}
 }
 
-class Component<T extends ComponentProps> {
-  constructor (public props:T) {
-
-  }
-}
-
-class Page extends Component<ComponentProps> {
-  pageInfo () {
+class Page extends Component<{ title: string }> {
+  pageInfo() {
     console.log(this.props.title);
   }
 }

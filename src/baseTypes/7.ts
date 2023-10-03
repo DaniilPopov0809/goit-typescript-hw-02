@@ -13,9 +13,5 @@ enum dayOfWeek {
   SATURDAY,
 }
 
-const isWeekend = (day:dayOfWeek):boolean =>{
-  if (day === dayOfWeek.SATURDAY || day=== dayOfWeek.SUNDAY) {
-    return true;
-  }
-  return false;
-}
+const isWeekend = (day: dayOfWeek): boolean =>
+  day === dayOfWeek.SATURDAY || day === dayOfWeek.SUNDAY;
